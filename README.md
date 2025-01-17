@@ -269,16 +269,16 @@ The below table presents the average token count values associated with each mod
 | Model | SR Task | AR Task |
 |:---:|:---:|:---:|
 | | (0..1 tools) | (2+ tools) |
-| Claude 3.5 Sonnet | 95.23\% | 95\% |
-| Claude 3 Haiku | 89.52\% | 30\% |
-| Claude 3 Opus | 90\% | 95\% |
-| Mistral Largest | 94.76\% | 45\% |
-| Mixtral 8x22B | 2.38\% | 0\% |
-| Mistral Small 7B | 76.19\% | 0\% |
-| GPT 3.5 Turbo | 85.71\% | 0\% |
-| GPT 4-o | 87.14\% | 100\% |
-| GPT 4-o Mini | 85.71\% | 77.5\% |
-| GPT 4 Turbo | 85.71\% | 90\% |
+| Claude 3.5 Sonnet | 5420.3 | 42768.1 |
+| Claude 3 Haiku | 5564.6 | 46535.7 |
+| Claude 3 Opus | 5892.6 | 44648.5 |
+| Mistral Largest | 6066.8 | 39877.6 |
+| Mixtral 8X22B | 2803.4 | 3007.3 |
+| Mistral Small 7B | 4162.7 | 4619.5 |
+| GPT 3.5 Turbo | 3242.3 | 2722.6 |
+| GPT 4-o | 3031.6 | 25965 |
+| GPT 4-o Mini | 3065 | 20900.7 |
+| GPT 4 Turbo | 3081.3 | 24308.5 |
 
 The below table presents the detailed token count values for each query and LLM tested:
 
