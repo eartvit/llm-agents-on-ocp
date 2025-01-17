@@ -1,0 +1,1 @@
+{"final_response": "Hello, I am Dave, your helpful assistant. How can I assist you today?", "total_tokens": 2519, "total_time_seconds": 1.32328200340271, "msg_sequence": ["<class 'langchain_core.messages.human.HumanMessage'>", "<class 'langchain_core.messages.ai.AIMessage'>"], "ai_tool_calls": {"1": {"name": "AI_did_not_call_any_tools"}}, "tool_call_responses": {}}

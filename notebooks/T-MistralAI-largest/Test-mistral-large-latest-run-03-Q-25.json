@@ -1,0 +1,1 @@
+{"final_response": "The read operation timed out", "total_tokens": 0, "total_time_seconds": 173.97611618041992, "msg_sequence": ["Exception in process_request: local variable 'messages' referenced before assignment"], "ai_tool_calls": {"name": "AI_exception"}, "tool_call_responses": {}}

@@ -1,0 +1,1 @@
+{"final_response": "Today is Wednesday.", "total_tokens": 1699, "total_time_seconds": 0.968163013458252, "msg_sequence": ["<class 'langchain_core.messages.human.HumanMessage'>", "<class 'langchain_core.messages.ai.AIMessage'>"], "ai_tool_calls": {"1": {"name": "AI_did_not_call_any_tools"}}, "tool_call_responses": {}}
