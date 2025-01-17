@@ -265,6 +265,21 @@ The below table presents the detailed response time values (in seconds) for each
 
 ### RQ3: How verbose do different LLMs perform on a set of IT Operations tasks?
 
+The below table presents the average token count values associated with each model as a summary of the results groupped by type of tasks:
+| Model | SR Task | AR Task |
+|:---:|:---:|:---:|
+| | (0..1 tools) | (2+ tools) |
+| Claude 3.5 Sonnet | 95.23\% | 95\% |
+| Claude 3 Haiku | 89.52\% | 30\% |
+| Claude 3 Opus | 90\% | 95\% |
+| Mistral Largest | 94.76\% | 45\% |
+| Mixtral 8x22B | 2.38\% | 0\% |
+| Mistral Small 7B | 76.19\% | 0\% |
+| GPT 3.5 Turbo | 85.71\% | 0\% |
+| GPT 4-o | 87.14\% | 100\% |
+| GPT 4-o Mini | 85.71\% | 77.5\% |
+| GPT 4 Turbo | 85.71\% | 90\% |
+
 The below table presents the detailed token count values for each query and LLM tested:
 
 | Query \# | Claude 3.5 Sonnet | Claude 3 Haiku | Claude 3 Opus | Mistral Largest | Mixtral 8x22B | Mistral Small (7B) | GPT 3.5 Turbo | GPT 4-o | GPT 4-o Mini | GPT 4 Turbo |
