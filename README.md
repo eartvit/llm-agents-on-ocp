@@ -1,8 +1,8 @@
 # Evaluating LLM Agents for AIOps on Red Hat OpenShift
 
-This repository is the `Empowering AIOps: Leveraging Large Language Models for IT Operations Management` paper experiments verification repository.
+This repository is the `Operationalizing AIOps with LLM Agents and Predictive Models: A Case Study in Kubernetes Environments` paper experiments verification repository.
 
-_Note: The paper is not yet published, however it has been sent for review at the [FSE2025 conference](https://conf.researchr.org/track/fse-2025/fse-2025-industry-papers), industry track. If accepted, as soon as that process completes, publication details shall be added here._
+_Note: The paper is not yet published, however it has been sent for review at the [ASE2025 conference](https://conf.researchr.org/track/ase-2025/ase-2025-industry-showcase), industry track. If accepted, as soon as that process completes, publication details shall be added here._
 
 In order to execute the experiments, access to a Red Hat OpenShift environment is required. If you don't have one, you can start a trial by creating an account at [RedHat Cloud website](https://cloud.redhat.com). Alternatively, it is also possible to execute the guide on a local (reduced version) of the platform, typically used for development purposes. Once you registered on the [RedHat Cloud website](https://cloud.redhat.com), you can obtain your version of the local Red Hat Openshift by downloading the installer from the [Console](https://console.redhat.com/openshift/create/local).
 
