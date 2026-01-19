@@ -1,17 +1,5 @@
-,total_tokens,total_time_seconds,final_response
-Q-01,2519,2.074761152267456,"Hello, I am Dave, your helpful assistant. How can I assist you today?"
-Q-02,2849,11.690582990646362,"I have access to the following tools:
-
-1. **List_OpenShift_Operators**: Lists OpenShift operators information in a given namespace.
-2. **Summarize_Pods_Information_In_OpenShift_Namespace**: Summarizes pods information in an OpenShift namespace.
-3. **Summarize_Services_Information_In_OpenShift_Namespace**: Summarizes services information in an OpenShift namespace.
-4. **List_Prometheus_Metrics_Names_Using_A_Filter**: Lists available metric names in a Prometheus instance using an input filter.
-5. **List_metric_values_between_a_timestamp_range**: Lists the application metric values and associated timestamps between a start and an end timestamp interval for a given metric name stored within a Prometheus instance.
-6. **Get_timestamp_and_time_ISO**: Calculates the timestamp, the ISO formatted string, and the timezone string of the requested time information.
-7. **File_create_plot_irate**: Creates a file with the plot of the instantaneous rate (irate) of an application metric values and associated timestamps between a start and an end timestamp interval for a given metric name stored within a Prometheus instance.
-8. **MLASP_generate_config**: Generates a set of parameter configuration to support a desired KPI value within a given precision boundary. Searches for the parameter configurations a given number of epochs.
-9. **RAG_tool**: Use this tool when searching for information about Red Hat OpenShift AI."
-Q-03,7517,42.016066551208496,"I have access to the following tools:
+Unnamed: 0,total_tokens,total_time_seconds,final_response
+Q-01,7517,42.016066551208496,"I have access to the following tools:
 
 - List_OpenShift_Operators: Lists OpenShift operators information in a given namespace.
 - Summarize_Pods_Information_In_OpenShift_Namespace: Summarize pods information in an OpenShift namespace
@@ -54,7 +42,7 @@ I have also retrieved the following information:
   - istio-operator-service (ports: 443, route: unavailable)
   - tekton-operator (ports: 9090, route: unavailable)
   - tekton-operator-webhook (ports: 443, route: unavailable)"
-Q-04,15775,27.609489679336548,"Here is the list of the tools I have access to:
+Q-02,15775,27.609489679336548,"Here is the list of the tools I have access to:
 
 1. List_OpenShift_Operators: Lists OpenShift operators information in a given namespace.
 2. Summarize_Pods_Information_In_OpenShift_Namespace: Summarize pods information in an OpenShift namespace
@@ -67,7 +55,7 @@ Q-04,15775,27.609489679336548,"Here is the list of the tools I have access to:
 9. RAG_tool: Use this tool when seaching for information about Red Hat OpenShift AI
 
 The tools List_OpenShift_Operators, Summarize_Pods_Information_In_OpenShift_Namespace and Summarize_Services_Information_In_OpenShift_Namespace are not working properly."
-Q-05,5489,5.019142150878906,"The operators in namespace demo are:
+Q-03,5489,5.019142150878906,"The operators in namespace demo are:
 
 - elasticsearch-operator
 - grafana-operator
@@ -79,7 +67,7 @@ Q-05,5489,5.019142150878906,"The operators in namespace demo are:
 - rhods-operator
 - serverless-operator
 - servicemeshoperator"
-Q-06,5595,8.059576034545898,"The operators in the demo namespace are:
+Q-04,5595,8.059576034545898,"The operators in the demo namespace are:
 
 - elasticsearch-operator: 5.8.11
 - grafana-operator: 5.12.0
@@ -91,7 +79,7 @@ Q-06,5595,8.059576034545898,"The operators in the demo namespace are:
 - rhods-operator: 2.11.0
 - serverless-operator: 1.33.2
 - servicemeshoperator: 2.6.0-0"
-Q-07,2868,11.72716498374939,"To create a Data Science Project, you need to follow these steps:
+Q-05,2868,11.72716498374939,"To create a Data Science Project, you need to follow these steps:
 
 1. **Define the Problem**: Clearly define the problem you want to solve. This will help you focus your efforts and ensure that your project is relevant and useful.
 
@@ -110,142 +98,7 @@ Q-07,2868,11.72716498374939,"To create a Data Science Project, you need to follo
 8. **Monitor and Maintain the Model**: Continuously monitor the performance of the model and make adjustments as needed to ensure that it remains accurate and relevant.
 
 By following these steps, you can create a successful Data Science Project that solves a real-world problem and delivers valuable insights."
-Q-08,2628,3.913067579269409,"Paris, the capital of France, is renowned for its art, culture, cuisine, and fashion. Known as the ""City of Light,"" it is home to iconic landmarks such as the Eiffel Tower, Louvre Museum, and Notre-Dame Cathedral. The city's charm lies in its historic architecture, picturesque Seine River, and vibrant neighborhoods like Montmartre and the Latin Quarter. Paris is also a global hub for business, education, entertainment, and media, making it one of the world's major tourist destinations."
-Q-09,7062,25.500548839569092,"I found the following information:
-
-My Storage
- - Use this bucket for storing your models and data. You can reuse this bucket and
-its connection for your notebooks and model servers.
-Pipelines Artifacts
- - Use this bucket as storage for your pipeline artifacts. A pipeline artifacts
-bucket is required when you create a pipeline server. For this tutorial, create this bucket to
-separate it from the first storage bucket for clarity.
-You can use your own storage buckets or run a provided script that creates local Minio storage buckets
-for you.
-Also, you must create a data connection to each storage bucket. A data connection is a resource that
-contains the configuration parameters needed to connect to an object storage bucket.
-You have two options for this tutorial, depending on whether you want to use your own storage buckets
-or use a script to create local Minio storage buckets:
-If you want to use your own S3-compatible object storage buckets, create data connections to
-CHAPTER 2. SETTING UP A PROJECT AND STORAGE
-7
-
-Repeat those steps to create as many buckets as you will need.
-
-Create a matching Data Connection for Minio
-
-Back in RHOAI, inside of your Data Science Project, Click on Add data connection:
-
-Then, fill out the required field to match with your newly-deployed Minio Object Storage
-
-You now have a Data Connection that maps to your mybucket bucket in your Minio Instance.
-
-This data connection can be used, among other things
-In your Workbenches
-For your Model Serving
-For your Pipeline Server Configuration
-
-Validate
-To test if everything is working correctly, you can access the workbench associated with your Data Connection and run the following commands (i.e., inside a Jupyter notebook):
-
-Install and import MinIO Python Client SDK
-!pip install minio
-
-from minio import Minio
-from minio.error import S3Error
-import  os
-import datetime
-
-d
-.
-In the
-Bucket
- field, enter the name of your S3-compatible object storage bucket.
-IMPORTANT
-If you specify incorrect data connection settings, you cannot update these
-settings on the same pipeline server. Therefore, you must delete the pipeline
-server and configure another one.
-5
-.
-In the
-Database
- section, click
-Show advanced database options
- to specify the database to
-store your pipeline data and select one of the following sets of actions:
-Select
-Use default database stored on your cluster
- to deploy a MariaDB database in your
-project.
-Select
-Connect to external MySQL database
- to add a new connection to an external
-database that your pipeline server can access.
-i
-.
-In the
-Host
- field, enter the database’s host name.
-ii
-.
-In the
-Port
- field, enter the database’s port.
-iii
-.
-In the
-Username
- field, enter the default user name that is connected to the database.
-iv
-.
-In the
-Password
- field, enter the password for the default user account.
-v
-.
-In the
-Database
-
-NOTE
-After the pipeline server is created, the
-/metadata
- and
-/artifacts
- folders are automatically
-created in the default
-root
- folder. Therefore, you are not required to specify any storage
-directories when configuring a data connection for your pipeline server.
-Prerequisites
-You have installed the OpenShift Pipelines operator.
-You have logged in to Red Hat OpenShift AI.
-If you are using specialized OpenShift AI groups, you are part of the user group or admin group
-(for example,
-rhoai-users
- or
-rhoai-admins
- ) in OpenShift.
-You have created a data science project that you can add a pipeline server to.
-You have an existing S3-compatible object storage bucket and you have configured write
-access to your S3 bucket on your storage account.
-Procedure
-1
-.
-From the OpenShift AI dashboard, click
-Data Science Projects
-.
-The
-Data science projects
- page opens.
-2
-.
-Click the name of the project that you want to configure a pipeline server for.
-A project details page opens.
-3
-.
-In the
-Pipelines"
-Q-10,5799,17.565399408340454,"In the namespace demo, there are 121 pods in the Succeeded state and 4 pods in the Running state.
+Q-06,5799,17.565399408340454,"In the namespace demo, there are 121 pods in the Succeeded state and 4 pods in the Running state.
 
 The running pods are:
 
@@ -261,7 +114,7 @@ The influxdb-558b6f9cd8-cddqc pod is associated with the influxdb service, which
 The prometheus-operator-5d8f4b6fdf-8lxdg pod is not associated with any service.
 
 The prometheus-prometheus-demo-0 pod is associated with the prometheus-operated service, which has a port named web with port number 9090 and protocol TCP. The route for this service is unavailable."
-Q-11,5748,11.922889709472656,"The namespace is demo.
+Q-07,5748,11.922889709472656,"The namespace is demo.
 
 The pod states are:
 
@@ -289,7 +142,7 @@ The running pods are:
   - Service: prometheus-operated
   - Ports: 9090 (web, TCP)
   - Route: unavailable"
-Q-12,5726,11.221679210662842,"The namespace is demo.
+Q-08,5726,11.221679210662842,"The namespace is demo.
 
 The pod states are:
 
@@ -317,7 +170,7 @@ The running pods are:
   - Service: prometheus-operated
   - Ports: 9090 (web, TCP)
   - Route: unavailable"
-Q-13,5637,15.48181414604187,"Here is the summary of the running pods in namespace demo:
+Q-09,5637,15.48181414604187,"Here is the summary of the running pods in namespace demo:
 
 - grafana-demo-deployment-5444cc645c-s7x5p
 - influxdb-558b6f9cd8-cddqc
@@ -327,17 +180,16 @@ Q-13,5637,15.48181414604187,"Here is the summary of the running pods in namespac
 The pods with routes are:
 
 - grafana-demo-deployment-5444cc645c-s7x5p: http://grafana-demo-demo.apps.cluster-mjcss.mjcss.sandbox1538.opentlc.com/"
-Q-14,5203,2.5534327030181885,Today is 2024-08-22.
-Q-15,5233,3.2422091960906982,The current date time is 2024-08-22T11:46:00.637832-04:00.
-Q-16,5215,2.994960308074951,The current timestamp is 1724341564.069713.
-Q-17,5276,3.7455248832702637,The timestamp is 1724330766.578025 and the date time is 2024-08-22T08:46:06.578025-04:00 in the timezone America/New_York.
-Q-18,5278,5.585755348205566,The timestamp is 1724352370.673187 and the date time is 2024-08-22T14:46:10.673187-04:00 in the timezone America/New_York.
-Q-19,5276,7.885409832000732,The timestamp is 1724330780.354946 and the date time is 2024-08-22T08:46:20.354946-04:00 in the timezone America/New_York.
-Q-20,8486,4.219429969787598,"Yes, there is a prometheus service running in namespace demo.
+Q-10,5233,3.2422091960906982,The current date time is 2024-08-22T11:46:00.637832-04:00.
+Q-11,5215,2.994960308074951,The current timestamp is 1724341564.069713.
+Q-12,5276,3.745524883270264,The timestamp is 1724330766.578025 and the date time is 2024-08-22T08:46:06.578025-04:00 in the timezone America/New_York.
+Q-13,5278,5.585755348205566,The timestamp is 1724352370.673187 and the date time is 2024-08-22T14:46:10.673187-04:00 in the timezone America/New_York.
+Q-14,5276,7.885409832000732,The timestamp is 1724330780.354946 and the date time is 2024-08-22T08:46:20.354946-04:00 in the timezone America/New_York.
+Q-15,8486,4.219429969787598,"Yes, there is a prometheus service running in namespace demo.
 
 The name of the service is prometheus-operated and the port value is 9090."
-Q-21,0,124.1393027305603,The read operation timed out
-Q-22,33220,32.9847207069397,"The Prometheus service name is prometheus-operated and it is running on port 9090 in namespace demo.
+Q-16,0,124.1393027305603,The read operation timed out
+Q-17,33220,32.9847207069397,"The Prometheus service name is prometheus-operated and it is running on port 9090 in namespace demo.
 
 The metrics stored by it that have a name that starts with load_generator are:
 
@@ -366,7 +218,7 @@ load_generator_spike_other_msg
 load_generator_spike_total_msg
 load_generator_system_load_average
 load_generator_total_msg"
-Q-23,5545,38.28505539894104,"The configuration of WireMock that supports a throughput KPI of 307 within a 2.9 percent precision is:
+Q-18,5545,38.28505539894104,"The configuration of WireMock that supports a throughput KPI of 307 within a 2.9 percent precision is:
 
 - asyncResp: 0.0
 - asyncRespThreads: 23.0
@@ -378,5 +230,5 @@ Q-23,5545,38.28505539894104,"The configuration of WireMock that supports a throu
 - timeoutSeconds: 1.0
 
 The prediction for this configuration is 305.76 with a deviation of 0.41."
-Q-24,11732,37.83035087585449,FILE-plot-load_generator_total_msg-1720885798-1722677398.png
-Q-25,0,173.97611618041992,The read operation timed out
+Q-19,11732,37.83035087585449,FILE-plot-load_generator_total_msg-1720885798-1722677398.png
+Q-20,0,173.97611618041992,The read operation timed out
